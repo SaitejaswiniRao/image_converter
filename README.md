@@ -47,20 +47,19 @@ Before setting up the package, ensure you have the following:
 ## Repository Structure
 
 Once cloned and set up, your workspace should look like this:
-
-      ````plaintext
-      ros2_ws/
-      ├── src/
-      │   └── image_converter/
-      │       ├── CMakeLists.txt
-      │       ├── package.xml
-      │       └── src/
-      │           └── image_converter_node.cpp
-              └── launch
-                  └── image_conversion_launch.py
-      ├── build/
-      ├── install/
-      └── log/
+ 
+         ros2_ws/
+         ├── src/
+         │   └── image_converter/
+         │       ├── CMakeLists.txt
+         │       ├── package.xml
+         │       └── src/
+         │           └── image_converter_node.cpp
+                 └── launch
+                     └── image_conversion_launch.py
+         ├── build/
+         ├── install/
+         └── log/
 
 ## Run the Node
 - Open a terminal and source the workspace
@@ -82,6 +81,7 @@ This will open a window which show the feed of /camera
     ros2 service call /set_mode std_srvs/srv/SetBool "{data: true}"
 - This is the service which is assigned to change the image feed into the gray scale format
 - After entering this command, open the rqt_image_view window and change the drop down to /camera/converted_image
+![Gray Scale ](https://github.com/user-attachments/assets/207a5162-ac70-4412-87ee-ab2d884efad7)
 
 
 ### Mode - 2 (Coloured Image)
@@ -91,3 +91,4 @@ This will open a window which show the feed of /camera
 - This is the service which is assigned to change the image feed into the gray scale format
 - After entering this command, open the rqt_image_view window and change the drop down to /camera/converted_image
 
+![Color](https://github.com/user-attachments/assets/87d13b60-0cdc-4e90-942a-fe24efcd964c)
